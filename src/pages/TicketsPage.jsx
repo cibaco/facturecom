@@ -102,7 +102,7 @@ const TicketsPage = () => {
                     <h2 className="text-2xl font-bold text-gray-800">Vos informations</h2>
                   </div>
                   
-                  <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">Nom complet *</label>
                       <input 

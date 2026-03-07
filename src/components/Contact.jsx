@@ -58,7 +58,7 @@ const Contact = () => {
           <div className="p-10 md:w-3/5 bg-white">
             <h3 className="text-2xl font-bold text-gray-800 font-serif mb-6">Envoyez un message</h3>
             <form className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Nom</label>
                   <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fce-orange focus:border-transparent outline-none bg-gray-50" />

@@ -6,11 +6,11 @@ const About = () => {
   return (
     <section id="apropos" className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
+
           {/* Image Side */}
-          <motion.div 
-            className="lg:w-1/2 relative"
+          <motion.div
+            className="w-full lg:w-2/5 relative"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -35,7 +35,7 @@ const About = () => {
 
           {/* Content Side */}
           <motion.div
-            className="lg:w-2/5"
+            className="w-full lg:w-2/5"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -89,7 +89,7 @@ const About = () => {
 
           {/* Button Side */}
           <motion.div
-            className="lg:w-1/5 flex items-center justify-center"
+            className="w-full lg:w-1/5 flex items-center justify-center"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
