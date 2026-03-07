@@ -6,17 +6,17 @@ const Ambassadors = () => {
     {
       name: "Sékouba Bambino",
       role: "Artiste Musicien",
-      image: "https://images.unsplash.com/photo-1525926477800-7a3df5d1b6e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWy0HIsU1W8jmnTbjrxHW7RrPOJeVZMyM4Lg&s"
     },
     {
       name: "Naby Keïta",
       role: "Footballeur International",
-      image: "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      image: "https://static.wikia.nocookie.net/liverpoolfc/images/c/ce/NKeita2021.jpeg/revision/latest?cb=20210811233428"
     },
     {
       name: "Soul Bang's",
       role: "Artiste R&B",
-      image: "https://images.unsplash.com/photo-1517230874863-941775797aa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      image: "https://musique.rfi.fr/sites/default/files/thumbnails/image/soul-bangs.jpg"
     }
   ];
 
