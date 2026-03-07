@@ -68,7 +68,7 @@ const Hero = () => {
             </motion.button>
           </Link>
           
-          <a href="#contact">
+          <a href="#contact" style={{ position: 'relative', left: '400px' }}>
             <motion.button
               className="bg-fce-green border-2 border-fce-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-fce-green transition-all duration-300 inline-flex items-center gap-2"
               whileHover={{ scale: 1.05 }}

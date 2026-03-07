@@ -34,8 +34,8 @@ const About = () => {
           </motion.div>
 
           {/* Content Side */}
-          <motion.div 
-            className="lg:w-1/2"
+          <motion.div
+            className="lg:w-2/5"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -85,6 +85,24 @@ const About = () => {
                 </div>
               </div>
             </div>
+          </motion.div>
+
+          {/* Button Side */}
+          <motion.div
+            className="lg:w-1/5 flex items-center justify-center"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <a
+              href="https://www.ledomedeparis.com/fr/spectacle/345/festi-environnement"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-fce-orange text-white px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-orange-500/50 hover:bg-fce-green transition-all duration-300 text-center"
+            >
+              Voir le spectacle
+            </a>
           </motion.div>
         </div>
       </div>
