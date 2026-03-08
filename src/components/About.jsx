@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2 } from 'lucide-react';
 
 const About = () => {
   return (
@@ -45,46 +44,32 @@ const About = () => {
               Notre Expertise
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-fce-green mb-6 font-serif">
-              Une passion pour l'événementiel depuis plus de 25 ans
+              Festi'Environnement
+              <br />
+              <span className="text-fce-orange">Quand la musique s'engage pour la planète</span>
             </h2>
             
-            <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              Facture Communication Événementielle est née de la vision de M. SANOH Alhassane. 
-              Avec une expérience riche et diversifiée dans le monde du showbiz, notre agence 
-              se positionne comme le partenaire idéal pour la réussite de vos projets culturels et corporatifs.
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
+              Le Dôme de Paris accueille Festi'Environnement, une soirée musicale caritative dédiée à la protection de notre planète.
             </p>
-
-            <div className="space-y-6 mb-8">
-              <div className="flex items-start gap-4">
-                <div className="bg-fce-orange/10 p-2 rounded-lg mt-1">
-                  <CheckCircle2 className="w-6 h-6 text-fce-orange" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-gray-800">25+ ans d'expertise</h4>
-                  <p className="text-gray-600">Une connaissance approfondie de l'industrie du spectacle et du divertissement.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="bg-fce-orange/10 p-2 rounded-lg mt-1">
-                  <CheckCircle2 className="w-6 h-6 text-fce-orange" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-gray-800">8+ ans en agence</h4>
-                  <p className="text-gray-600">Une structure professionnelle dédiée à la communication et l'organisation.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="bg-fce-orange/10 p-2 rounded-lg mt-1">
-                  <CheckCircle2 className="w-6 h-6 text-fce-orange" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-gray-800">10+ Événements Majeurs</h4>
-                  <p className="text-gray-600">Des succès retentissants qui témoignent de notre savoir-faire.</p>
-                </div>
-              </div>
-            </div>
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
+              Sur scène, des artistes engagés unissent leurs voix pour défendre une cause qui nous concerne tous : la préservation de l'environnement et de la biodiversité.
+            </p>
+            <p className="text-gray-700 font-semibold mb-3">
+              L'objectif, c'est pour :
+            </p>
+            <ul className="space-y-2 mb-6 text-gray-600">
+              <li>🌳 La reforestation et la protection des écosystèmes</li>
+              <li>🌊 La préservation des océans et de la vie marine</li>
+              <li>♻️ L'économie circulaire et le zéro déchet</li>
+              <li>🐝 La sauvegarde de la biodiversité</li>
+            </ul>
+            <p className="text-gray-600 text-lg leading-relaxed mb-2">
+              Plus qu'un concert, c'est un mouvement. Rejoignez-nous pour une soirée où chaque note compte et où votre présence fait la différence.
+            </p>
+            <p className="text-fce-green font-bold text-lg mb-8">
+              Ensemble, faisons résonner l'urgence climatique.
+            </p>
           </motion.div>
 
           {/* Button Side */}
