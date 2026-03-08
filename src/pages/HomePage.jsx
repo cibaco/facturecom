@@ -27,8 +27,6 @@ const HomePage = () => {
         <main>
           <Hero />
           <About />
-          <Services />
-          <Portfolio />
 
           {/* Video Section */}
           <section className="py-20 bg-fce-green overflow-hidden">
@@ -67,6 +65,8 @@ const HomePage = () => {
             </div>
           </section>
 
+          <Services />
+          <Portfolio />
           <Ambassadors />
           <Contact />
         </main>
