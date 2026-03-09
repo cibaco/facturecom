@@ -20,155 +20,172 @@ const Header = () => {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Fermer le menu si on change de route
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location]);
+
+  // Bloquer le scroll body quand le menu est ouvert
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [isMobileMenuOpen]);
+
   const handleNavClick = (e, href) => {
     setIsMobileMenuOpen(false);
-    
-    // If it's an anchor link and we are on homepage
     if (href.startsWith('/#') && isHomePage) {
       e.preventDefault();
       const id = href.replace('/', '');
       const element = document.querySelector(id);
       if (element) {
         const offset = 80;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+        const offsetPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
       }
     }
-    // If we are not on homepage, let the Link component handle the navigation to /#id
   };
 
   return (
-    <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-fce-green/95 backdrop-blur-lg shadow-lg py-2' 
-          : 'bg-gradient-to-r from-fce-green via-fce-lightGreen to-fce-darkOrange/20 backdrop-blur-sm py-4'
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <nav className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/">
-            <img
-              src="/images/logo.jpg"
-              alt="Facture Communication Événementielle"
-              className="h-12 md:h-14 w-auto object-contain"
-            />
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item, index) => (
-              item.href.startsWith('/#') ? (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
-                  className="font-medium text-white hover:text-fce-orange transition-colors relative group text-sm uppercase tracking-wide"
-                >
-                  {item.name}
-                  <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-fce-orange transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              ) : (
-                <Link
-                   key={item.name}
-                   to={item.href}
-                   className="font-medium text-white hover:text-fce-orange transition-colors relative group text-sm uppercase tracking-wide"
-                >
-                   {item.name}
-                </Link>
-              )
-            ))}
-            
-            <Link to="/billets">
-              <motion.button
-                className="bg-fce-orange text-white px-6 py-2 rounded-full font-bold shadow-lg hover:shadow-orange-500/50 transition-all duration-300 flex items-center gap-2"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Ticket className="w-4 h-4" />
-                Billetterie
-              </motion.button>
+    <>
+      <motion.header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? 'bg-fce-green/95 backdrop-blur-lg shadow-lg py-2'
+            : 'bg-gradient-to-r from-fce-green via-fce-lightGreen to-fce-darkOrange/20 backdrop-blur-sm py-3'
+        }`}
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <nav className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-14">
+            {/* Logo */}
+            <Link to="/" className="flex-shrink-0">
+              <img
+                src="/images/logo.jpg"
+                alt="Facture Communication Événementielle"
+                className="h-10 md:h-12 w-auto object-contain"
+              />
             </Link>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center gap-4 lg:hidden">
-            <button
-              className="p-2 text-white"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {navItems.map((item) =>
+                item.href.startsWith('/#') ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
+                    className="font-medium text-white hover:text-fce-orange transition-colors relative group text-sm uppercase tracking-wide"
+                  >
+                    {item.name}
+                    <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-fce-orange transition-all duration-300 group-hover:w-full" />
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="font-medium text-white hover:text-fce-orange transition-colors relative group text-sm uppercase tracking-wide"
+                  >
+                    {item.name}
+                  </Link>
+                )
               )}
-            </button>
-          </div>
-        </div>
+              <Link to="/billets">
+                <motion.button
+                  className="bg-fce-orange text-white px-6 py-2 rounded-full font-bold shadow-lg hover:shadow-orange-500/50 transition-all duration-300 flex items-center gap-2"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Ticket className="w-4 h-4" />
+                  Billetterie
+                </motion.button>
+              </Link>
+            </div>
 
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
+            {/* Mobile: Billetterie + Hamburger */}
+            <div className="flex items-center gap-3 lg:hidden">
+              <Link to="/billets" onClick={() => setIsMobileMenuOpen(false)}>
+                <span className="bg-fce-orange text-white px-4 py-2 rounded-full font-bold text-sm flex items-center gap-1.5">
+                  <Ticket className="w-3.5 h-3.5" />
+                  Billets
+                </span>
+              </Link>
+              <button
+                className="p-2 text-white rounded-lg hover:bg-white/10 transition-colors"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label="Toggle menu"
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
+          </div>
+        </nav>
+      </motion.header>
+
+      {/* Mobile Menu — panel fixe indépendant du header */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            {/* Overlay sombre */}
             <motion.div
-              className="lg:hidden mt-4 bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            {/* Panel menu */}
+            <motion.div
+              className="fixed top-0 left-0 right-0 z-40 lg:hidden bg-fce-green pt-20 pb-6 px-4 shadow-2xl"
+              initial={{ y: '-100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '-100%' }}
+              transition={{ type: 'tween', duration: 0.3 }}
             >
-              <div className="py-4 px-2 space-y-2">
-                {navItems.map((item, index) => (
-                   item.href.startsWith('/#') ? (
+              <div className="space-y-1">
+                {navItems.map((item) =>
+                  item.href.startsWith('/#') ? (
                     <a
                       key={item.name}
                       href={item.href}
                       onClick={(e) => handleNavClick(e, item.href)}
-                      className="block py-3 px-4 text-fce-green font-bold hover:bg-fce-orange/10 hover:text-fce-orange rounded-lg transition-colors"
+                      className="flex items-center py-3.5 px-4 text-white font-semibold text-lg hover:bg-white/10 rounded-xl transition-colors border-b border-white/10 last:border-0"
                     >
                       {item.name}
                     </a>
-                   ) : (
+                  ) : (
                     <Link
                       key={item.name}
                       to={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="block py-3 px-4 text-fce-green font-bold hover:bg-fce-orange/10 hover:text-fce-orange rounded-lg transition-colors"
+                      className="flex items-center py-3.5 px-4 text-white font-semibold text-lg hover:bg-white/10 rounded-xl transition-colors border-b border-white/10 last:border-0"
                     >
                       {item.name}
                     </Link>
-                   )
-                ))}
-                <Link 
-                  to="/billets" 
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block py-3 px-4 bg-fce-orange text-white font-bold rounded-lg text-center mt-4 mx-4 shadow-md"
-                >
-                  Billetterie
-                </Link>
+                  )
+                )}
+                <div className="pt-4">
+                  <Link
+                    to="/billets"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center justify-center gap-2 w-full py-4 bg-fce-orange text-white font-bold text-lg rounded-xl shadow-lg"
+                  >
+                    <Ticket className="w-5 h-5" />
+                    Réserver mes billets
+                  </Link>
+                </div>
               </div>
             </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
-    </motion.header>
+          </>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 

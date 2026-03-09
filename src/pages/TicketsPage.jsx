@@ -10,7 +10,7 @@ import OrderSummary from '@/components/OrderSummary';
 import PaymentMethods from '@/components/PaymentMethods';
 
 const TicketsPage = () => {
-  const [selectedTier, setSelectedTier] = useState('Normal');
+  const [selectedTier, setSelectedTier] = useState('PLACE DEBOUT');
   const [quantity, setQuantity] = useState(1);
   const [formData, setFormData] = useState({
     nom: '',
@@ -20,9 +20,9 @@ const TicketsPage = () => {
   });
 
   const tiers = [
-    { name: 'Normal', price: 100, features: ['Accès standard', 'Placement debout', 'Accès bar payant'] },
-    { name: 'Réduit', price: 70, features: ['Étudiants / -18 ans', 'Justificatif requis', 'Placement debout'] },
-    { name: 'VIP', price: 200, features: ['Accès prioritaire', 'Espace VIP assis', 'Cocktail dinatoire inclus', 'Rencontre artistes'] }
+    { name: 'PLACE DEBOUT', price: 100, features: ['Accès standard', 'Placement debout', 'Accès bar payant'] },
+    { name: 'Super VIP CARRE OR', price: 150, features: ['Carré Or', 'Cocktail', 'Avantages'] },
+    { name: 'Super VIP CARRE ARGENT', price: 125, features: ['Accès prioritaire', 'Espace VIP assis', 'Cocktail dinatoire inclus', 'Rencontre artistes'] }
   ];
 
   const currentTier = tiers.find(t => t.name === selectedTier);

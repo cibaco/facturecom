@@ -70,11 +70,8 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-          <p>© {currentYear} Facture Communication Événementielle. Tous droits réservés.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white">Mentions légales</a>
-            <a href="#" className="hover:text-white">Politique de confidentialité</a>
-          </div>
+          <p>© 2026 Facture Communication Événementielle. Tous droits réservés.</p>
+          <p>Site réalisé par <a href="https://iyoconcept.com/" target="_blank" rel="noopener noreferrer" className="text-fce-orange hover:text-white transition-colors">IYOConcept</a></p>
         </div>
       </div>
     </footer>

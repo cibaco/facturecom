@@ -1,6 +1,0 @@
-## Pages
-- [| Boutique Facture](/productdetail): No description available
-- [Billetterie | Facture Communication Événementielle](/tickets): No description available
-- [Boutique Officielle | Facture Communication Événementielle](/store): Découvrez les produits exclusifs et le merchandising officiel de Facture Communication Événementielle.
-- [Commande Confirmée - Facture Communication Événementielle](/success): Votre commande a été confirmée avec succès.
-- [Facture Communication Événementielle | Agence Artistique & Production](/home): Agence de communication événementielle et diffusion de spectacles. Fondée par M. SANOH Alhassane. Concerts, festivals, marketing et promotion d

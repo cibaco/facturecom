@@ -7,59 +7,82 @@ const Hero = () => {
   return (
     <section
       id="accueil"
-      className="relative min-h-[60vh] md:min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image */}
+      {/* Background Image — responsive avec WebP + fallback JPEG */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/images/baniere.jpg"
-          alt="Concert crowd with vibrant lights"
-          className="w-full h-full object-cover object-center md:object-center"
-        />
+        <picture>
+          {/* Mobile XS < 480px — portrait 480px WebP */}
+          <source
+            type="image/webp"
+            media="(max-width: 479px)"
+            srcSet="/images/bannieres-mobile/hero-mobile-xs.webp"
+          />
+          <source
+            type="image/jpeg"
+            media="(max-width: 479px)"
+            srcSet="/images/bannieres-mobile/hero-mobile-xs.jpg"
+          />
+
+          {/* Mobile SM 480–767px — portrait 768px WebP */}
+          <source
+            type="image/webp"
+            media="(max-width: 767px)"
+            srcSet="/images/bannieres-mobile/hero-mobile-sm.webp"
+          />
+          <source
+            type="image/jpeg"
+            media="(max-width: 767px)"
+            srcSet="/images/bannieres-mobile/hero-mobile-sm.jpg"
+          />
+
+          {/* Tablette 768–1279px — paysage 1280px WebP */}
+          <source
+            type="image/webp"
+            media="(max-width: 1279px)"
+            srcSet="/images/bannieres-mobile/hero-desktop-md.webp"
+          />
+          <source
+            type="image/jpeg"
+            media="(max-width: 1279px)"
+            srcSet="/images/bannieres-mobile/hero-desktop-md.jpg"
+          />
+
+          {/* Grand desktop ≥ 1280px — paysage 1920px WebP */}
+          <source
+            type="image/webp"
+            srcSet="/images/bannieres-mobile/hero-desktop-xl.webp"
+          />
+          <source
+            type="image/jpeg"
+            srcSet="/images/bannieres-mobile/hero-desktop-xl.jpg"
+          />
+
+          {/* Fallback ultime */}
+          <img
+            src="/images/baniere.jpg"
+            alt="Festi'Environnement — Concert caritatif"
+            className="w-full h-full object-cover object-top md:object-center"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </picture>
+
+        {/* Overlay pour lisibilité */}
+        <div className="absolute inset-0 bg-black/25" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-32 text-center">
-        {/* <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="inline-block px-4 py-1 border border-fce-orange/50 rounded-full bg-black/30 backdrop-blur-sm text-fce-orange font-medium mb-6"
-        >
-          L'EXCELLENCE ÉVÉNEMENTIELLE
-        </motion.div> */}
-
-     {/*    <motion.h1
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight font-serif"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          Transformez vos idées en
-          <br />
-          <span className="bg-gradient-to-r from-fce-orange to-yellow-400 bg-clip-text text-transparent">
-            Expériences Mémorables
-          </span>
-        </motion.h1> */}
-
-      {/*   <motion.p
-          className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto"
+      {/* Content — ancré en bas sur mobile, centré sur desktop */}
+      <div className="relative z-10 w-full container mx-auto px-4 flex flex-col items-center justify-end pb-28 min-h-screen md:justify-center md:pb-0 text-center">
+        <motion.div
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Facture Communication Événementielle : Une expertise unique pour donner vie à vos projets les plus ambitieux.
-        </motion.p> */}
-
-        <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-0.5"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
           <Link to="/billets">
             <motion.button
-              className="bg-fce-orange text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-orange-500/50 hover:bg-white hover:text-fce-orange transition-all duration-300 inline-flex items-center gap-2"
+              className="bg-fce-orange text-white px-8 py-4 rounded-full font-bold text-base md:text-lg shadow-2xl hover:shadow-orange-500/50 hover:bg-white hover:text-fce-orange transition-all duration-300 inline-flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -67,10 +90,10 @@ const Hero = () => {
               Réserver vos Billets
             </motion.button>
           </Link>
-          
-          <a href="#contact">
+
+          <a href="/#contact">
             <motion.button
-              className="bg-fce-green border-2 border-fce-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-fce-green transition-all duration-300 inline-flex items-center gap-2"
+              className="bg-fce-green/80 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-base md:text-lg hover:bg-white hover:text-fce-green transition-all duration-300 inline-flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -81,8 +104,8 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Decorative Bottom Shape */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+      {/* Dégradé bas */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-10" />
     </section>
   );
 };
