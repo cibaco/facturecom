@@ -17,7 +17,7 @@ const About = () => {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white z-10">
               <img 
-                src="/public/images/festi-pied.jpg" 
+                src="/images/festi-pied.jpg" 
                 alt="M. SANOH Alhassane - Founder" 
                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
               />

@@ -64,16 +64,12 @@ const Header = () => {
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link
-            to="/"
-            className="flex flex-col leading-tight group"
-          >
-            <span className="text-xl md:text-2xl font-bold text-white group-hover:text-fce-orange transition-colors">
-              Facture
-            </span>
-            <span className="text-xs md:text-sm font-medium text-gray-200 tracking-wider">
-              COMMUNICATION ÉVÉNEMENTIELLE
-            </span>
+          <Link to="/">
+            <img
+              src="/images/logo.jpg"
+              alt="Facture Communication Événementielle"
+              className="h-12 md:h-14 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -8,14 +8,14 @@ const Portfolio = () => {
       id: 1,
       title: "Festi environnement France",
       category: "Festival & Écologie",
-      image: "/public/images/40X60.jpg",
+      image: "/images/40X60.jpg",
       description: "Un événement majeur célébrant l'environnement à travers la musique et la culture."
     },
     {
       id: 2,
       title: "Textile guinéen à l'honneur",
       category: "Mode & Culture",
-      image: "/public/images/even2.jpg",
+      image: "/images/even2.jpg",
       description: "Mise en lumière du savoir-faire artisanal guinéen lors d'un défilé prestigieux."
     }
   ];

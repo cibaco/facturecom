@@ -5,16 +5,16 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section 
+    <section
       id="accueil"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[60vh] md:min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/public/images/baniere.jpg"
+          src="/images/baniere.jpg"
           alt="Concert crowd with vibrant lights"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center md:object-center"
         />
       </div>
 
