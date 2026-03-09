@@ -2,13 +2,19 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const logos = [
-  '/images/leslogosdespartenaires/iyo-concept-logo.jpg',
+  '/images/leslogosdespartenaires/env-FR.jpg',
+  '/images/leslogosdespartenaires/env-GN.jpg',
+   '/images/leslogosdespartenaires/culture-FR.jpg',
+  '/images/leslogosdespartenaires/Etrang-GN.jpg',
+  '/images/leslogosdespartenaires/mine-GN.jpg',
+  '/images/leslogosdespartenaires/transport-GN.jpg',
+   '/images/leslogosdespartenaires/sacem.jpg',
   '/images/leslogosdespartenaires/PHOTO-2026-01-04-19-26-38.jpg',
   '/images/leslogosdespartenaires/PHOTO-2026-01-04-19-32-11.jpg',
   '/images/leslogosdespartenaires/PHOTO-2026-01-04-19-38-02.jpg',
   '/images/leslogosdespartenaires/PHOTO-2026-01-04-19-39-20.jpg',
   '/images/leslogosdespartenaires/PHOTO-2026-01-04-19-40-03.jpg',
-  '/images/leslogosdespartenaires/PHOTO-2026-01-05-22-39-46.jpg',
+  '/images/leslogosdespartenaires/iyo-concept-logo.jpg',
 ];
 
 const Partners = () => {
