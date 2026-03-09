@@ -67,9 +67,17 @@ const About = () => {
             <p className="text-gray-600 text-lg leading-relaxed mb-2">
               Plus qu'un concert, c'est un mouvement. Rejoignez-nous pour une soirée où chaque note compte et où votre présence fait la différence.
             </p>
-            <p className="text-fce-green font-bold text-lg mb-8">
+            <p className="text-fce-green font-bold text-lg mb-6">
               Ensemble, faisons résonner l'urgence climatique.
             </p>
+            <a
+              href="/pdf/dossier-de-presse.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-fce-green text-white px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-green-500/50 hover:bg-fce-orange transition-all duration-300"
+            >
+              En savoir plus
+            </a>
           </motion.div>
 
           {/* Button Side */}

@@ -66,6 +66,15 @@ module.exports = {
         sans: ['Poppins', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
       },
+      animation: {
+        marquee: 'marquee 30s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],

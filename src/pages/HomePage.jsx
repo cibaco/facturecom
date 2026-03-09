@@ -8,6 +8,7 @@ import Services from '@/components/Services';
 import About from '@/components/About';
 import Ambassadors from '@/components/Ambassadors';
 import Contact from '@/components/Contact';
+import Partners from '@/components/Partners';
 import Footer from '@/components/Footer';
 
 const HomePage = () => {
@@ -69,6 +70,7 @@ const HomePage = () => {
           <Portfolio />
           <Ambassadors />
           <Contact />
+          <Partners />
         </main>
         <Footer />
       </div>

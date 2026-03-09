@@ -47,13 +47,22 @@ const TicketsPage = () => {
         <main className="pt-32 pb-20">
           <div className="container mx-auto px-4">
             
+            {/* Banner */}
+            <div className="bg-fce-orange text-white text-center py-4 px-6 rounded-2xl mb-8 shadow-lg">
+              <p className="text-lg font-bold tracking-wide">
+                🎟️ La billetterie sera bientôt disponible
+              </p>
+            </div>
+
             {/* Header Section */}
             <div className="mb-12">
               <Link to="/" className="inline-flex items-center text-gray-500 hover:text-fce-orange mb-4 transition-colors">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour à l'accueil
               </Link>
-              <h1 className="text-4xl md:text-5xl font-bold text-fce-green font-serif mb-2">Concert de l'année</h1>
-              <p className="text-gray-600 text-lg">Réservez vos places dès maintenant pour une expérience inoubliable.</p>
+              <h1 className="text-4xl md:text-5xl font-bold text-fce-green font-serif mb-2">
+                CONCERT CARITATIF FESTI'ENVIRONNEMENT
+              </h1>
+              <p className="text-fce-orange font-semibold text-lg italic">Quand la musique s'engage pour la planète</p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
