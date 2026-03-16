@@ -20,8 +20,8 @@ const artists = [
     name: 'DEGG J Force 3',
     role: 'Artiste invité',
     genre: 'Hip-Hop / Rap',
-    country: 'Sénégal',
-    flag: '🇸🇳',
+    country: 'Guinée',
+    flag: '🇬🇳',
     description: (
       <>
         Le{' '}
