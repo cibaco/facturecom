@@ -6,6 +6,7 @@ import Hero from '@/components/Hero';
 import Portfolio from '@/components/Portfolio';
 import Services from '@/components/Services';
 import About from '@/components/About';
+import Artists from '@/components/Artists';
 import Ambassadors from '@/components/Ambassadors';
 import Contact from '@/components/Contact';
 import Partners from '@/components/Partners';
@@ -67,6 +68,7 @@ const HomePage = () => {
             </div>
           </section>
 
+          <Artists />
           <Services />
           <Portfolio />
           <Ambassadors />
