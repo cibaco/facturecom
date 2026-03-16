@@ -66,9 +66,9 @@ const Portfolio = () => {
                   <p className="text-gray-200 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                     {event.description}
                   </p>
-                  <button className="text-white border border-white/30 hover:bg-white hover:text-fce-green px-4 py-2 rounded-full text-sm font-semibold transition-all flex items-center gap-2">
+                  {/* <button className="text-white border border-white/30 hover:bg-white hover:text-fce-green px-4 py-2 rounded-full text-sm font-semibold transition-all flex items-center gap-2">
                     Voir les détails <ExternalLink className="w-3 h-3" />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </motion.div>

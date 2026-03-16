@@ -21,8 +21,8 @@ const TicketsPage = () => {
 
   const tiers = [
     { name: 'PLACE DEBOUT', price: 100, features: ['Accès standard', 'Placement debout', 'Accès bar payant'] },
-    { name: 'Super VIP CARRE OR', price: 150, features: ['Carré Or', 'Cocktail', 'Avantages'] },
-    { name: 'Super VIP CARRE ARGENT', price: 125, features: ['Accès prioritaire', 'Espace VIP assis', 'Cocktail dinatoire inclus', 'Rencontre artistes'] }
+    { name: 'Super VIP CARRE ARGENT', price: 125, features: ['Accès prioritaire', 'Espace VIP assis', 'Cocktail dinatoire inclus', 'Rencontre artistes'] },
+    { name: 'Super VIP CARRE OR', price: 150, features: ['Carré Or', 'Cocktail', 'Avantages'] }
   ];
 
   const currentTier = tiers.find(t => t.name === selectedTier);
@@ -105,7 +105,7 @@ const TicketsPage = () => {
                 </section>
 
                 {/* Step 2: Your Info */}
-                <section>
+               {/*  <section>
                   <div className="flex items-center gap-3 mb-6">
                     <div className="bg-fce-orange text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
                     <h2 className="text-2xl font-bold text-gray-800">Vos informations</h2>
@@ -158,9 +158,9 @@ const TicketsPage = () => {
                     </div>
                   </div>
                 </section>
-
+ */}
                 {/* Step 3: Payment */}
-                <section>
+               {/*  <section>
                   <div className="flex items-center gap-3 mb-6">
                     <div className="bg-fce-orange text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
                     <h2 className="text-2xl font-bold text-gray-800">Paiement sécurisé</h2>
@@ -169,7 +169,7 @@ const TicketsPage = () => {
                   <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                     <PaymentMethods total={total} />
                   </div>
-                </section>
+                </section> */}
 
               </div>
 

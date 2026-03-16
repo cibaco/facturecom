@@ -9,14 +9,13 @@ Site web de l'agence **Facture Communication Événementielle** — agence artis
 - **Tailwind CSS** + **Radix UI** — styles et composants UI
 - **Framer Motion** — animations
 - **Stripe** + **PayPal** — paiements en ligne
-- **Hostinger E-commerce API** — gestion des produits/boutique
 
 ## Structure du projet
 
 ```
 src/
 ├── api/
-│   └── EcommerceApi.js      # Client API Hostinger (produits, panier, checkout)
+│   └── EcommerceApi.js     
 ├── components/
 │   ├── ui/                  # Composants UI (Button, Toast, etc.)
 │   ├── Header.jsx
