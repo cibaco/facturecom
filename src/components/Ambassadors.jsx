@@ -16,7 +16,7 @@ const Ambassadors = () => {
     {
       name: "Soul Bang's",
       role: "Artiste R&B",
-      image: "https://musique.rfi.fr/sites/default/files/thumbnails/image/soul-bangs.jpg"
+      image: "/public/images/soul-bangs.jpg"
     }
   ];
 
