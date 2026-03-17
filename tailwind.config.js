@@ -55,6 +55,8 @@ module.exports = {
           lightGreen: '#0a5c2b',
           orange: '#f97316',
           darkOrange: '#c2410c',
+          gold: '#C9A84C',
+          silver: '#9EA3A8',
         }
       },
       borderRadius: {

@@ -74,6 +74,7 @@ const Hero = () => {
 
       {/* Content — ancré en bas sur mobile, centré sur desktop */}
       <div className="relative z-10 w-full container mx-auto px-4 flex flex-col items-center justify-end pb-28 min-h-screen md:justify-center md:pb-0 text-center">
+
         <motion.div
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
           initial={{ opacity: 0, y: 30 }}

@@ -63,6 +63,17 @@ const Header = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
       >
+        {/* Slogan Bar */}
+        <div className="overflow-hidden border-b border-white/10 py-1">
+          <div className="slogan-marquee flex whitespace-nowrap" style={{ width: 'max-content' }}>
+            {[0, 1].map((i) => (
+              <span key={i} className="inline-block px-16 text-fce-orange text-xs font-semibold italic tracking-wide">
+                🌿 FestiEnvironnement &nbsp;·&nbsp; c'est pour sauver la planète &nbsp;·&nbsp; qui sauve la planète &nbsp;·&nbsp; protège l'Humanité
+              </span>
+            ))}
+          </div>
+        </div>
+
         <nav className="container mx-auto px-4">
           <div className="flex items-center justify-between h-14">
             {/* Logo */}
@@ -143,7 +154,7 @@ const Header = () => {
             />
             {/* Panel menu */}
             <motion.div
-              className="fixed top-0 left-0 right-0 z-40 lg:hidden bg-fce-green pt-20 pb-6 px-4 shadow-2xl"
+              className="fixed top-0 left-0 right-0 z-40 lg:hidden bg-fce-green pt-28 pb-6 px-4 shadow-2xl"
               initial={{ y: '-100%' }}
               animate={{ y: 0 }}
               exit={{ y: '-100%' }}

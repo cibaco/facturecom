@@ -69,7 +69,7 @@ const About = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="/pdf/dossier-de-presse.pdf"
+                href="/pdf/dossier-de-presse-3.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-fce-green text-white px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-green-500/50 hover:bg-fce-orange transition-all duration-300 text-center"

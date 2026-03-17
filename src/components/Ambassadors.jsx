@@ -16,7 +16,7 @@ const Ambassadors = () => {
     {
       name: "Soul Bang's",
       role: "Artiste R&B",
-      image: "/public/images/soul-bangs.jpg"
+      image: "/images/soul-bangs.jpg"
     }
   ];
 

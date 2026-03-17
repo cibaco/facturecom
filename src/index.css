@@ -55,6 +55,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Slogan marquee */
+@keyframes sloganScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.slogan-marquee {
+  animation: sloganScroll 22s linear infinite;
+  will-change: transform;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
