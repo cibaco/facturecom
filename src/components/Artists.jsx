@@ -17,6 +17,18 @@ const artists = [
   },
   {
     id: 2,
+    name: 'Habib Fatako',
+    role: 'Artiste invité',
+    genre: 'Musique Guinéenne',
+    country: 'Guinée',
+    flag: '🇬🇳',
+    description:
+      'Héritier d\'une dynastie musicale guinéenne, Habib Fatako perpétue l\'héritage de son père, le légendaire Sékouba Fatako. Sa musique authentique et son talent inné font de lui l\'un des ambassadeurs incontournables de la culture guinéenne.',
+    image: '/images/artists/habib-fatako.jpg',
+    headliner: false,
+  },
+  {
+    id: 3,
     name: 'DEGG J Force 3',
     role: 'Artiste invité',
     genre: 'Hip-Hop / Rap',
