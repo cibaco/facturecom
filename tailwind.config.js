@@ -27,7 +27,7 @@ module.exports = {
           foreground: '#ffffff',
         },
         secondary: {
-          DEFAULT: '#f97316', // Orange
+          DEFAULT: '#D4AF37', // Jaune or
           foreground: '#ffffff',
         },
         destructive: {
@@ -53,8 +53,8 @@ module.exports = {
         fce: {
           green: '#023a17',
           lightGreen: '#0a5c2b',
-          orange: '#f97316',
-          darkOrange: '#c2410c',
+          orange: '#D4AF37',
+          darkOrange: '#A07820',
           gold: '#C9A84C',
           silver: '#9EA3A8',
         }

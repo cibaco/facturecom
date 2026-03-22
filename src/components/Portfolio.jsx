@@ -15,7 +15,7 @@ const Portfolio = () => {
       id: 2,
       title: "Textile guinéen à l'honneur",
       category: "Mode & Culture",
-      image: "/images/even2.jpg",
+      image: "/images/galerie/IMG-20260316-WA0015.jpg",
       description: "Mise en lumière du savoir-faire artisanal guinéen lors d'un défilé prestigieux."
     }
   ];

@@ -18,7 +18,7 @@
     --primary: 142 90% 12%; /* #023a17 Converted roughly to HSL */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 24 94% 53%; /* #f97316 Converted roughly to HSL */
+    --secondary: 43 66% 52%; /* #D4AF37 Jaune or */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -76,7 +76,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #023a17, #f97316);
+  background: linear-gradient(to bottom, #023a17, #D4AF37);
   border-radius: 5px;
 }
 

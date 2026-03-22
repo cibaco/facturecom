@@ -6,7 +6,7 @@ const Ambassadors = () => {
     {
       name: "Sékouba Bambino",
       role: "Artiste Musicien",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWy0HIsU1W8jmnTbjrxHW7RrPOJeVZMyM4Lg&s"
+      image: "/images/galerie/IMG-20260316-WA0045.jpg"
     },
     {
       name: "Naby Keïta",

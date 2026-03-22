@@ -24,7 +24,9 @@ const artists = [
     flag: '🇬🇳',
     description:
       'Héritier d\'une dynastie musicale guinéenne, Habib Fatako perpétue l\'héritage de son père, le légendaire Sékouba Fatako. Sa musique authentique et son talent inné font de lui l\'un des ambassadeurs incontournables de la culture guinéenne.',
-    image: '/images/artists/habib-fatako.jpg',
+    image: '/images/artists/habib-fatako-portrait.jpg',
+    objectFit: 'contain',
+    objectPosition: 'center center',
     headliner: false,
   },
   {
@@ -148,11 +150,15 @@ const GuestCard = ({ artist, index }) => (
     className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 flex flex-col"
   >
     {/* Photo */}
-    <div className="relative h-56 bg-fce-green overflow-hidden">
+    <div className="relative h-72 bg-white overflow-hidden">
       <img
         src={artist.image}
         alt={artist.name}
-        className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105"
+        className="w-full h-full transition-transform duration-500 hover:scale-105"
+        style={{
+          objectFit: artist.objectFit || 'cover',
+          objectPosition: artist.objectPosition || 'center top',
+        }}
         onError={(e) => {
           e.target.style.display = 'none';
           e.target.nextSibling.style.display = 'flex';
