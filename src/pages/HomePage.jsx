@@ -32,10 +32,10 @@ const HomePage = () => {
           <About />
 
           {/* Video Section */}
-          <section className="py-20 bg-fce-green overflow-hidden">
+          <section className="py-12 md:py-20 bg-fce-green overflow-hidden">
             <div className="container mx-auto px-4">
               <motion.div
-                className="text-center mb-12"
+                className="text-center mb-8 md:mb-12"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -44,7 +44,7 @@ const HomePage = () => {
                 <span className="text-fce-orange font-bold uppercase tracking-wider text-sm mb-2 block">
                   À l'affiche
                 </span>
-                <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-serif">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 font-serif">
                   Sékouba Bambino en concert
                 </h2>
                 <div className="w-24 h-1 bg-fce-orange mx-auto rounded-full"></div>

@@ -31,19 +31,19 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-12 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
 
           {/* Info Side */}
           <div className="bg-fce-green text-white p-7 sm:p-8 lg:p-10 md:w-2/5 flex flex-col justify-between">
             <div>
-              <h3 className="text-2xl font-bold font-serif mb-6">Contactez-nous</h3>
-              <p className="text-gray-300 mb-8 text-sm leading-relaxed">
+              <h3 className="text-xl sm:text-2xl font-bold font-serif mb-4 md:mb-6">Contactez-nous</h3>
+              <p className="text-gray-300 mb-6 md:mb-8 text-sm leading-relaxed">
                 Notre équipe est à votre disposition pour donner vie à vos projets événementiels.
               </p>
 
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 <div className="flex items-start gap-3">
                   <Phone className="w-5 h-5 text-fce-orange mt-1" />
                   <div>
@@ -74,7 +74,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="mt-12">
+            <div className="mt-6 md:mt-12">
               <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center">
                 <span className="font-serif font-bold text-2xl text-fce-orange">FCE</span>
               </div>
@@ -83,7 +83,7 @@ const Contact = () => {
 
           {/* Form Side */}
           <div className="p-7 sm:p-8 lg:p-10 md:w-3/5 bg-white">
-            <h3 className="text-2xl font-bold text-gray-800 font-serif mb-6">Envoyez un message</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-800 font-serif mb-4 md:mb-6">Envoyez un message</h3>
 
             {/* Success */}
             {status === 'success' && (

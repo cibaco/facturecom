@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section id="apropos" className="py-16 md:py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-16">
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 lg:gap-16">
 
           {/* Image Side */}
           <motion.div
@@ -15,7 +15,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white z-10">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 sm:border-8 border-white z-10">
               <img
                 src="/images/festi-pied.jpg"
                 alt="M. SANOH Alhassane - Founder"

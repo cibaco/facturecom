@@ -24,9 +24,25 @@ const artists = [
     flag: '🇬🇳',
     description:
       'Héritier d\'une dynastie musicale guinéenne, Habib Fatako perpétue l\'héritage de son père, le légendaire Sékouba Fatako. Sa musique authentique et son talent inné font de lui l\'un des ambassadeurs incontournables de la culture guinéenne.',
-    image: '/images/artists/habib-fatako-portrait.jpg',
+    image: '/images/artists/fatako-affiche.jpg',
     objectFit: 'contain',
     objectPosition: 'center center',
+    photoHeight: '480px',
+    headliner: false,
+  },
+  {
+    id: 4,
+    name: 'Tenin Diawara',
+    role: 'Artiste invitée',
+    genre: 'Afro-Soul',
+    country: 'Guinée',
+    flag: '🇬🇳',
+    description:
+      'Voix puissante de la musique guinéenne, Tenin Diawara envoûte par son talent et son élégance. Artiste engagée, elle porte fièrement les couleurs de la culture guinéenne sur les scènes internationales.',
+    image: '/images/artists/tenin-diawara-affiche.jpeg',
+    objectFit: 'contain',
+    objectPosition: 'center center',
+    photoHeight: '480px',
     headliner: false,
   },
   {
@@ -54,7 +70,10 @@ const artists = [
         <span className="text-fce-orange font-bold">Soyez de la partie.</span>
       </>
     ),
-    image: '/images/artists/degg-j-force-3.jpg',
+    image: '/images/artists/degg-j-force-affiche.jpg',
+    objectFit: 'contain',
+    objectPosition: 'center center',
+    photoHeight: '480px',
     headliner: false,
   },
 ];
@@ -74,11 +93,11 @@ const HeadlinerCard = ({ artist }) => (
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}
-    className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 mb-12"
+    className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 mb-8 md:mb-12"
   >
     <div className="grid grid-cols-1 lg:grid-cols-2">
       {/* Photo */}
-      <div className="relative h-72 lg:h-auto min-h-80 bg-fce-green overflow-hidden">
+      <div className="relative h-52 sm:h-64 lg:h-auto lg:min-h-96 bg-fce-green overflow-hidden">
         <img
           src={artist.image}
           alt={artist.name}
@@ -105,7 +124,7 @@ const HeadlinerCard = ({ artist }) => (
       </div>
 
       {/* Content */}
-      <div className="p-8 lg:p-12 flex flex-col justify-center">
+      <div className="p-5 sm:p-8 lg:p-12 flex flex-col justify-center">
         <div className="flex items-center gap-2 mb-3">
           <span className="text-2xl">{artist.flag}</span>
           <span className="text-gray-500 text-sm flex items-center gap-1">
@@ -114,7 +133,7 @@ const HeadlinerCard = ({ artist }) => (
           </span>
         </div>
 
-        <h3 className="text-3xl md:text-4xl font-bold text-fce-green font-serif mb-2 leading-tight">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-fce-green font-serif mb-2 leading-tight">
           {artist.name}
         </h3>
 
@@ -150,7 +169,7 @@ const GuestCard = ({ artist, index }) => (
     className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 flex flex-col"
   >
     {/* Photo */}
-    <div className="relative h-72 bg-white overflow-hidden">
+    <div className="relative bg-white overflow-hidden" style={{ height: artist.photoHeight || '18rem' }}>
       <img
         src={artist.image}
         alt={artist.name}
@@ -253,11 +272,11 @@ const Artists = () => {
   const guests = artists.filter((a) => !a.headliner);
 
   return (
-    <section id="artistes" className="py-24 bg-gray-50">
+    <section id="artistes" className="py-14 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -266,7 +285,7 @@ const Artists = () => {
           <span className="text-fce-orange font-bold uppercase tracking-wider text-sm mb-2 block">
             Line-up
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-fce-green mb-4 font-serif">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-fce-green mb-4 font-serif">
             Les Artistes
           </h2>
           <div className="w-24 h-1 bg-fce-orange mx-auto rounded-full mb-6"></div>
@@ -279,7 +298,7 @@ const Artists = () => {
         {headliner && <HeadlinerCard artist={headliner} />}
 
         {/* Guests + Surprise */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
           {guests.map((artist, i) => (
             <GuestCard key={artist.id} artist={artist} index={i} />
           ))}

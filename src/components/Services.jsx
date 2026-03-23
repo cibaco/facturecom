@@ -25,10 +25,10 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50 relative">
+    <section id="services" className="py-12 md:py-20 bg-gray-50 relative">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -37,13 +37,13 @@ const Services = () => {
           <span className="text-fce-orange font-bold uppercase tracking-wider text-sm mb-2 block">
             Ce que nous faisons
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-fce-green mb-4 font-serif">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-fce-green mb-4 font-serif">
             Nos Services
           </h2>
           <div className="w-24 h-1 bg-fce-orange mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -56,10 +56,10 @@ const Services = () => {
                 whileHover={{ y: -10 }}
                 className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group"
               >
-                <div className={`w-14 h-14 lg:w-16 lg:h-16 rounded-2xl flex items-center justify-center mb-5 ${service.color} group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon className="w-7 h-7 lg:w-8 lg:h-8" />
+                <div className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl flex items-center justify-center mb-4 sm:mb-5 ${service.color} group-hover:scale-110 transition-transform duration-300`}>
+                  <Icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-3 font-serif group-hover:text-fce-orange transition-colors">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 mb-3 font-serif group-hover:text-fce-orange transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">

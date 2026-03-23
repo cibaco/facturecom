@@ -6,14 +6,14 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-fce-orange">
+    <footer className="bg-gray-900 text-white pt-12 md:pt-16 pb-6 md:pb-8 border-t-4 border-fce-orange">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
           
           {/* Brand */}
           <div>
-            <h2 className="text-2xl font-bold font-serif mb-2 text-white">Facture</h2>
-            <p className="text-xs font-bold text-fce-orange tracking-widest mb-6 uppercase">Communication Événementielle</p>
+            <h2 className="text-xl sm:text-2xl font-bold font-serif mb-2 text-white">Facture</h2>
+            <p className="text-xs font-bold text-fce-orange tracking-wide sm:tracking-widest mb-4 md:mb-6 uppercase">Communication Événementielle</p>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Votre partenaire de confiance pour des événements inoubliables. 
               Expertise, passion et professionnalisme depuis plus de 15 ans.
@@ -27,7 +27,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4 font-serif">Navigation</h3>
+            <h3 className="text-base sm:text-lg font-bold mb-4 font-serif">Navigation</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li><Link to="/" className="hover:text-fce-orange transition-colors">Accueil</Link></li>
               <li><a href="#services" className="hover:text-fce-orange transition-colors">Services</a></li>
@@ -40,7 +40,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-bold mb-4 font-serif">Nos Services</h3>
+            <h3 className="text-base sm:text-lg font-bold mb-4 font-serif">Nos Services</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>Diffusion de spectacles</li>
               <li>Marketing & Promotion</li>
@@ -52,7 +52,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-bold mb-4 font-serif">Contact</h3>
+            <h3 className="text-base sm:text-lg font-bold mb-4 font-serif">Contact</h3>
             <ul className="space-y-4 text-gray-400 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-fce-orange mt-0.5 flex-shrink-0" />
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+        <div className="border-t border-gray-800 pt-6 mt-6 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4 text-xs text-gray-500">
           <p>© 2026 Facture Communication Événementielle. Tous droits réservés.</p>
           <p>Site réalisé par <a href="https://iyoconcept.com/" target="_blank" rel="noopener noreferrer" className="text-fce-orange hover:text-white transition-colors">IYOConcept</a></p>
         </div>

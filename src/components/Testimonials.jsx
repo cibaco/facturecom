@@ -6,7 +6,7 @@ const testimonials = [
     quote: "Ambassadeur et partenaire régulier de Facture communication événementielle, je peux attester de leur excellence. Leur niveau de prestation transcende les attentes. Un partenaire qui élève chaque projet !",
     name: "Sékouba Bambino",
     role: "Artiste chanteur",
-    image: "/images/bambino1.jpg",
+    image: "/images/galerie/IMG-20260316-WA0014.jpg",
   },
   {
     quote: "Une équipe passionnée et experte qui a su concrétiser notre vision avec créativité. Leur professionnalisme a dépassé nos attentes, tout en respectant les enjeux environnementaux. Un partenaire clé pour des événements à impact positif.",
@@ -24,14 +24,14 @@ const QuoteIcon = () => (
 
 const Testimonials = () => {
   return (
-    <section id="temoignages" className="py-20 bg-fce-green text-white relative overflow-hidden">
+    <section id="temoignages" className="py-12 md:py-20 bg-fce-green text-white relative overflow-hidden">
       {/* Background accents */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-fce-orange opacity-5 rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 opacity-5 rounded-full blur-3xl transform -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -40,7 +40,7 @@ const Testimonials = () => {
           <span className="text-fce-orange font-bold uppercase tracking-wider text-sm mb-2 block">
             Ils témoignent
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-serif">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 font-serif">
             Témoignages
           </h2>
           <div className="w-24 h-1 bg-fce-orange mx-auto rounded-full"></div>

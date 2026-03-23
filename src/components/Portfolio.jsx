@@ -21,10 +21,10 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-white">
+    <section id="portfolio" className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -33,13 +33,13 @@ const Portfolio = () => {
           <span className="text-fce-orange font-bold uppercase tracking-wider text-sm mb-2 block">
             Nos Réalisations
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-fce-green mb-4 font-serif">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-fce-green mb-4 font-serif">
             Événements Marquants
           </h2>
           <div className="w-24 h-1 bg-fce-orange mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 max-w-5xl mx-auto">
           {events.map((event, index) => (
             <motion.div
               key={event.id}
@@ -57,12 +57,12 @@ const Portfolio = () => {
                 />
               </div>
               
-              <div className="absolute inset-0 bg-gradient-to-t from-fce-green/95 via-fce-green/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+              <div className="absolute inset-0 bg-gradient-to-t from-fce-green/95 via-fce-green/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 sm:p-6 md:p-8">
                 <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <span className="text-fce-orange font-bold text-sm tracking-wider mb-2 block">
                     {event.category}
                   </span>
-                  <h3 className="text-white text-2xl font-bold mb-2 font-serif">{event.title}</h3>
+                  <h3 className="text-white text-xl sm:text-2xl font-bold mb-2 font-serif">{event.title}</h3>
                   <p className="text-gray-200 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                     {event.description}
                   </p>
