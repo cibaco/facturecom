@@ -42,9 +42,9 @@ const TicketCard = ({ tier, price, features, isSelected, onSelect }) => {
     <motion.div
       onClick={onSelect}
       style={cardStyle}
-      className={`relative p-6 rounded-2xl cursor-pointer transition-all duration-300 overflow-hidden ${
+      className={`relative p-4 sm:p-6 rounded-2xl cursor-pointer transition-all duration-300 overflow-hidden ${
         isSelected
-          ? 'bg-fce-green text-white shadow-2xl scale-105 border-2 border-fce-orange'
+          ? 'bg-fce-green text-white shadow-2xl scale-100 sm:scale-105 border-2 border-fce-orange'
           : `bg-white text-gray-800 hover:shadow-xl border ${tierStyle ? 'border' : 'border-gray-200 hover:border-fce-orange/50'}`
       }`}
       whileHover={{ y: -5 }}
@@ -60,22 +60,22 @@ const TicketCard = ({ tier, price, features, isSelected, onSelect }) => {
       )}
 
       <h3
-        className={`text-xl font-bold mb-2 ${isSelected ? 'text-white' : !tierStyle ? 'text-fce-green' : ''}`}
+        className={`text-sm sm:text-base md:text-lg font-bold mb-2 leading-tight break-words ${isSelected ? 'text-white' : !tierStyle ? 'text-fce-green' : ''}`}
         style={titleStyle}
       >
         {tier}
       </h3>
 
-      <div className="mb-6">
+     {/*  <div className="mb-6">
         <span className="text-3xl font-bold">{price}€</span>
         <span className={`text-sm ml-1 ${isSelected ? 'text-gray-300' : 'text-gray-500'}`}>/ billet</span>
       </div>
-
-      <ul className="space-y-3">
+ */}
+      <ul className="space-y-2 sm:space-y-3">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-start gap-3">
+          <li key={index} className="flex items-start gap-2 sm:gap-3">
             <Check
-              className={`w-5 h-5 flex-shrink-0 ${isSelected ? 'text-fce-orange' : 'text-fce-green'}`}
+              className={`w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 ${isSelected ? 'text-fce-orange' : 'text-fce-green'}`}
               style={
                 !isSelected && tierStyle
                   ? { color: tierStyle.border }
@@ -90,7 +90,7 @@ const TicketCard = ({ tier, price, features, isSelected, onSelect }) => {
       </ul>
 
       <button
-        className={`w-full mt-6 py-2 rounded-lg font-semibold transition-colors ${
+        className={`w-full mt-4 sm:mt-6 py-2 rounded-lg font-semibold text-sm sm:text-base transition-colors ${
           isSelected
             ? 'bg-fce-orange text-white hover:bg-white hover:text-fce-orange'
             : 'bg-gray-100 text-gray-800 hover:bg-fce-green hover:text-white'

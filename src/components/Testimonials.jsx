@@ -7,6 +7,7 @@ const testimonials = [
     name: "Sékouba Bambino",
     role: "Artiste chanteur",
     image: "/images/galerie/IMG-20260316-WA0014.jpg",
+    objectPosition: 'center 15%',
   },
   {
     quote: "Une équipe passionnée et experte qui a su concrétiser notre vision avec créativité. Leur professionnalisme a dépassé nos attentes, tout en respectant les enjeux environnementaux. Un partenaire clé pour des événements à impact positif.",
@@ -64,7 +65,8 @@ const Testimonials = () => {
                 <img
                   src={t.image}
                   alt={t.name}
-                  className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-fce-orange shadow-lg"
+                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-fce-orange shadow-lg"
+                  style={{ objectPosition: t.objectPosition || 'center top' }}
                 />
                 <div>
                   <p className="font-bold text-fce-orange font-serif text-sm sm:text-base">{t.name}</p>

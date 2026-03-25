@@ -5,12 +5,12 @@ import { ShoppingCart } from 'lucide-react';
 const OrderSummary = ({ tier, price, quantity, total }) => {
   return (
     <motion.div
-      className="bg-white rounded-2xl shadow-xl p-6 border border-gray-100 sticky top-24"
+      //className="bg-white rounded-2xl shadow-xl p-6 border border-gray-100 sticky top-24"
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.2 }}
     >
-      <div className="flex items-center gap-3 mb-6 border-b border-gray-100 pb-4">
+      {/* <div className="flex items-center gap-3 mb-6 border-b border-gray-100 pb-4">
         <div className="bg-fce-green/10 p-3 rounded-full">
           <ShoppingCart className="w-6 h-6 text-fce-green" />
         </div>
@@ -38,7 +38,7 @@ const OrderSummary = ({ tier, price, quantity, total }) => {
 
       <div className="bg-blue-50 text-blue-800 text-xs p-3 rounded-lg mb-4">
         🔒 Paiement sécurisé par SSL. Vos données sont protégées.
-      </div>
+      </div> */}
     </motion.div>
   );
 };

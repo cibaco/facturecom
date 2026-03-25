@@ -20,9 +20,9 @@ const TicketsPage = () => {
   });
 
   const tiers = [
-    { name: 'PLACE DEBOUT', price: 100, features: ['Accès standard', 'Placement debout', 'Accès bar payant'] },
-    { name: 'Super VIP CARRE ARGENT', price: 125, features: ['Accès prioritaire', 'Espace VIP assis', 'Cocktail dinatoire inclus', 'Rencontre artistes'] },
-    { name: 'Super VIP CARRE OR', price: 150, features: ['Carré Or', 'Cocktail', 'Avantages'] }
+    { name: 'PLACE DEBOUT', price: '', features: ['Accès standard', 'Placement debout', 'Accès bar payant'] },
+    { name: 'Super VIP CARRE ARGENT', price: '', features: ['Accès prioritaire', 'Espace VIP assis', 'Cocktail dinatoire inclus', 'Rencontre artistes'] },
+    { name: 'Super VIP CARRE OR', price: '', features: ['Carré Or', 'Cocktail', 'Avantages'] }
   ];
 
   const currentTier = tiers.find(t => t.name === selectedTier);
@@ -44,40 +44,40 @@ const TicketsPage = () => {
       <div className="min-h-screen bg-gray-50">
         <Header />
         
-        <main className="pt-32 pb-20">
+        <main className="pt-20 sm:pt-28 md:pt-32 pb-12 md:pb-20">
           <div className="container mx-auto px-4">
             
             {/* Banner */}
-            <div className="bg-fce-orange text-white text-center py-4 px-6 rounded-2xl mb-8 shadow-lg">
-              <p className="text-lg font-bold tracking-wide">
+            <div className="bg-fce-orange text-white text-center py-3 sm:py-4 px-4 sm:px-6 rounded-xl sm:rounded-2xl mb-6 md:mb-8 shadow-lg">
+              <p className="text-sm sm:text-base md:text-lg font-bold tracking-wide">
                 🎟️ La billetterie sera bientôt disponible
               </p>
             </div>
 
             {/* Header Section */}
-            <div className="mb-12">
-              <Link to="/" className="inline-flex items-center text-gray-500 hover:text-fce-orange mb-4 transition-colors">
+            <div className="mb-6 md:mb-12">
+              <Link to="/" className="inline-flex items-center text-gray-500 hover:text-fce-orange mb-3 sm:mb-4 transition-colors text-sm sm:text-base">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Retour à l'accueil
               </Link>
-              <h1 className="text-4xl md:text-5xl font-bold text-fce-green font-serif mb-2">
+              <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-fce-green font-serif mb-2 leading-tight">
                 CONCERT CARITATIF FESTI'ENVIRONNEMENT
               </h1>
-              <p className="text-fce-orange font-semibold text-lg italic">Quand la musique s'engage pour la planète</p>
+              <p className="text-fce-orange font-semibold text-sm sm:text-base md:text-lg italic">Quand la musique s'engage pour la planète</p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-              
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
+
               {/* Left Column: Selection & Form */}
-              <div className="lg:col-span-2 space-y-12">
+              <div className="lg:col-span-2 space-y-8 lg:space-y-12">
                 
                 {/* Step 1: Choose Ticket */}
                 <section>
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="bg-fce-orange text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
-                    <h2 className="text-2xl font-bold text-gray-800">Choisissez vos billets</h2>
+                  <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                    <div className="bg-fce-orange text-white w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center font-bold text-sm sm:text-base flex-shrink-0">1</div>
+                    <h2 className="text-lg sm:text-2xl font-bold text-gray-800">Choisissez vos billets</h2>
                   </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
                     {tiers.map((tier) => (
                       <TicketCard
                         key={tier.name}
@@ -90,7 +90,7 @@ const TicketsPage = () => {
                     ))}
                   </div>
 
-                  <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between max-w-md">
+               {/*    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between max-w-md">
                     <span className="font-semibold text-gray-700">Nombre de billets</span>
                     <select 
                       value={quantity}
@@ -101,7 +101,7 @@ const TicketsPage = () => {
                         <option key={i + 1} value={i + 1}>{i + 1}</option>
                       ))}
                     </select>
-                  </div>
+                  </div> */}
                 </section>
 
                 {/* Step 2: Your Info */}
