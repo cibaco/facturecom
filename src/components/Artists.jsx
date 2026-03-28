@@ -46,6 +46,21 @@ const artists = [
     headliner: false,
   },
   {
+    id: 5,
+    name: 'Lil Sacko',
+    role: 'Artiste invité',
+    genre: 'Nouvelle vague guinéenne',
+    country: 'Guinée',
+    flag: '🇬🇳',
+    description:
+      'Avec son style audacieux et sa créativité sans limites, Lil Sacko s\'impose comme l\'une des figures emblématiques de la nouvelle vague musicale guinéenne. Un talent brut qui promet de marquer son époque.',
+    image: '/images/artists/lil-sacko.jpg',
+    objectFit: 'contain',
+    objectPosition: 'center center',
+    photoHeight: '480px',
+    headliner: false,
+  },
+  {
     id: 3,
     name: 'DEGG J Force 3',
     role: 'Artiste invité',
