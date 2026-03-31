@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Music, MapPin, Star, Clock } from 'lucide-react';
 
@@ -55,6 +54,21 @@ const artists = [
     description:
       'Avec son style audacieux et sa créativité sans limites, Lil Sacko s\'impose comme l\'une des figures emblématiques de la nouvelle vague musicale guinéenne. Un talent brut qui promet de marquer son époque.',
     image: '/images/artists/lil-sacko.jpg',
+    objectFit: 'contain',
+    objectPosition: 'center center',
+    photoHeight: '480px',
+    headliner: false,
+  },
+  {
+    id: 6,
+    name: 'Yakhouba Sekou',
+    role: 'Artiste invité',
+    genre: 'Guitare Mandingue',
+    country: 'Guinée',
+    flag: '🇬🇳',
+    description:
+      'Virtuose de la guitare guinéenne, Yakhouba Sekou enchante par son jeu mélodique et sa maîtrise exceptionnelle. Gardien des traditions musicales mandingues, il fait vibrer les cordes au rythme de l\'âme africaine.',
+    image: '/images/artists/yakhouba-sekou.jpg',
     objectFit: 'contain',
     objectPosition: 'center center',
     photoHeight: '480px',
