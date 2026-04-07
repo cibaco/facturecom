@@ -105,6 +105,21 @@ const artists = [
     photoHeight: '480px',
     headliner: false,
   },
+  {
+    id: 7,
+    name: 'Petit KANDIA',
+    role: 'Artiste invité',
+    genre: 'Musique Traditionnelle',
+    country: 'Guinée',
+    flag: '🇬🇳',
+    description:
+      'Héritier d\'une lignée de griots, Petit KANDIA perpétue avec grâce et fierté le patrimoine musical guinéen. Sa voix envoûtante et son sens du rythme profond font de chaque performance un voyage au cœur de l\'âme mandingue.',
+    image: '/images/artists/petit-kandia.jpg',
+    objectFit: 'contain',
+    objectPosition: 'center center',
+    photoHeight: '480px',
+    headliner: false,
+  },
 ];
 
 const fadeUp = {
