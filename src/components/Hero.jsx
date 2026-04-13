@@ -103,6 +103,34 @@ const Hero = () => {
             </motion.button>
           </a>
         </motion.div>
+
+        {/* Vidéo France 24 */}
+        <motion.div
+          className="w-full max-w-xl mt-8"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+        >
+          <div className="bg-black/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
+            {/* Titre */}
+            <div className="flex items-center gap-3 px-4 py-3 border-b border-white/10">
+              <span className="bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded tracking-wider uppercase">
+                France 24
+              </span>
+              <p className="text-white text-sm font-medium truncate">
+                France24 parle du Festi&apos;Environnement
+              </p>
+            </div>
+            {/* Vidéo */}
+            <video
+              className="w-full aspect-video"
+              controls
+              preload="metadata"
+            >
+              <source src="/videos/video-france24-bambino.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </motion.div>
       </div>
 
       {/* Dégradé bas */}
