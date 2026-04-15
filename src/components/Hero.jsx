@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Ticket } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -104,15 +103,15 @@ const Hero = () => {
           </a>
         </motion.div>
 
-        {/* Vidéo France 24 */}
+        {/* Vidéos */}
         <motion.div
-          className="w-full max-w-xl mt-8"
+          className="w-full max-w-4xl mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
+          {/* France 24 */}
           <div className="bg-black/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
-            {/* Titre */}
             <div className="flex items-center gap-3 px-4 py-3 border-b border-white/10">
               <span className="bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded tracking-wider uppercase">
                 France 24
@@ -121,13 +120,23 @@ const Hero = () => {
                 France24 parle du Festi&apos;Environnement
               </p>
             </div>
-            {/* Vidéo */}
-            <video
-              className="w-full aspect-video"
-              controls
-              preload="metadata"
-            >
+            <video className="w-full aspect-video" controls preload="metadata">
               <source src="/videos/video-france24-bambino.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          {/* Bambino — Aéroport Conakry */}
+          <div className="bg-black/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
+            <div className="flex items-center gap-3 px-4 py-3 border-b border-white/10">
+              <span className="bg-fce-green text-white text-xs font-bold px-2 py-0.5 rounded tracking-wider uppercase">
+                Exclusif
+              </span>
+              <p className="text-white text-sm font-medium truncate">
+                Bambino — Aéroport de Conakry
+              </p>
+            </div>
+            <video className="w-full aspect-video" controls preload="metadata">
+              <source src="/videos/bambino-aeroport-conakry.mp4" type="video/mp4" />
             </video>
           </div>
         </motion.div>
