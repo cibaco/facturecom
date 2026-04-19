@@ -29,6 +29,26 @@ const HomePage = () => {
         
         <main>
           <Hero />
+
+          {/* Affiche conférence de presse */}
+          <section className="py-10 md:py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <motion.div
+                className="max-w-2xl mx-auto"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+              >
+                <img
+                  src="/images/affiche-conference-de-presse.jpg"
+                  alt="Affiche conférence de presse — Festi'Environnement"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />
+              </motion.div>
+            </div>
+          </section>
+
           <About />
 
           {/* Video Section */}
