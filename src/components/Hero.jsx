@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Ticket } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -80,7 +79,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <Link to="/billets">
+          <a href="https://www.ticketmaster.fr/fr/manifestation/festival-de-l-environnement-billet/idmanif/658516" target="_blank" rel="noopener noreferrer">
             <motion.button
               className="bg-fce-orange text-white px-8 py-4 rounded-full font-bold text-base md:text-lg shadow-2xl hover:shadow-orange-500/50 hover:bg-white hover:text-fce-orange transition-all duration-300 inline-flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
@@ -89,7 +88,7 @@ const Hero = () => {
               <Ticket className="w-5 h-5" />
               Réserver vos Billets
             </motion.button>
-          </Link>
+          </a>
 
           <a href="/#contact">
             <motion.button

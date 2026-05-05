@@ -15,6 +15,7 @@ const Header = () => {
     { name: 'Services', href: '/#services' },
     { name: 'Portfolio', href: '/#portfolio' },
     { name: 'Galerie', href: '/galerie' },
+    { name: 'Vidéos', href: '/videos' },
     { name: 'Ambassadeurs', href: '/#ambassadeurs' },
     { name: 'À propos', href: '/#apropos' },
     { name: 'Contact', href: '/#contact' },
@@ -108,7 +109,7 @@ const Header = () => {
                   </Link>
                 )
               )}
-              <Link to="/billets">
+              <a href="https://www.ticketmaster.fr/fr/manifestation/festival-de-l-environnement-billet/idmanif/658516" target="_blank" rel="noopener noreferrer">
                 <motion.button
                   className="bg-fce-orange text-white px-6 py-2 rounded-full font-bold shadow-lg hover:shadow-orange-500/50 transition-all duration-300 flex items-center gap-2"
                   whileHover={{ scale: 1.05 }}
@@ -117,17 +118,17 @@ const Header = () => {
                   <Ticket className="w-4 h-4" />
                   Billetterie
                 </motion.button>
-              </Link>
+              </a>
             </div>
 
             {/* Mobile: Billetterie + Hamburger */}
             <div className="flex items-center gap-3 lg:hidden">
-              <Link to="/billets" onClick={() => setIsMobileMenuOpen(false)}>
+              <a href="https://www.ticketmaster.fr/fr/manifestation/festival-de-l-environnement-billet/idmanif/658516" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
                 <span className="bg-fce-orange text-white px-4 py-2 rounded-full font-bold text-sm flex items-center gap-1.5">
                   <Ticket className="w-3.5 h-3.5" />
                   Billets
                 </span>
-              </Link>
+              </a>
               <button
                 className="p-2 text-white rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

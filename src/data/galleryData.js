@@ -24,8 +24,8 @@ const events = [
     category: 'concerts',
     date: '2026-03-16',
     files: [
-      'fatako2.jpg',
-      'IMG-20260316-WA0006.jpg',
+      'IMG-20260423-WA0001.jpg',
+      'IMG-20260423-WA0003.jpg',
       'IMG-20260316-WA0013.jpg',
       'IMG-20260316-WA0014.jpg',
       'IMG-20260316-WA0015.jpg',

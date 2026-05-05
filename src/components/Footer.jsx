@@ -34,7 +34,7 @@ const Footer = () => {
               <li><a href="#portfolio" className="hover:text-fce-orange transition-colors">Portfolio</a></li>
               <li><a href="#apropos" className="hover:text-fce-orange transition-colors">À propos</a></li>
               <li><Link to="/galerie" className="hover:text-fce-orange transition-colors">Galerie</Link></li>
-              <li><Link to="/billets" className="hover:text-fce-orange transition-colors">Billetterie</Link></li>
+              <li><a href="https://www.ticketmaster.fr/fr/manifestation/festival-de-l-environnement-billet/idmanif/658516" target="_blank" rel="noopener noreferrer" className="hover:text-fce-orange transition-colors">Billetterie</a></li>
             </ul>
           </div>
 
