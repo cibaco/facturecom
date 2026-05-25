@@ -33,19 +33,32 @@ const HomePage = () => {
           {/* Affiche conférence de presse */}
           <section className="py-10 md:py-16 bg-white">
             <div className="container mx-auto px-4">
-              <motion.div
-                className="max-w-2xl mx-auto"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-              >
-                <img
-                  src="/images/affiche-conference-de-presse.jpg"
-                  alt="Affiche conférence de presse — Festi'Environnement"
-                  className="w-full h-auto rounded-2xl shadow-2xl"
-                />
-              </motion.div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7 }}
+                >
+                  <img
+                    src="/images/affiche-presse1.jpg"
+                    alt="Affiche conférence de presse 1 — Festi'Environnement"
+                    className="w-full h-auto rounded-2xl shadow-2xl"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7, delay: 0.15 }}
+                >
+                  <img
+                    src="/images/affiche-presse2.jpg"
+                    alt="Affiche conférence de presse 2 — Festi'Environnement"
+                    className="w-full h-auto rounded-2xl shadow-2xl"
+                  />
+                </motion.div>
+              </div>
             </div>
           </section>
 

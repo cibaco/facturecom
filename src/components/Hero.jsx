@@ -79,20 +79,22 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <a href="https://www.ticketmaster.fr/fr/manifestation/festival-de-l-environnement-billet/idmanif/658516" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.ticketmaster.fr/fr/manifestation/festival-de-l-environnement-billet/idmanif/658516" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
             <motion.button
-              className="bg-fce-orange text-white px-8 py-4 rounded-full font-bold text-base md:text-lg shadow-2xl hover:shadow-orange-500/50 hover:bg-white hover:text-fce-orange transition-all duration-300 inline-flex items-center gap-2"
+              className="w-full sm:w-auto bg-fce-orange text-white px-8 py-5 sm:py-4 rounded-full font-bold text-xl sm:text-base md:text-lg shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 hover:bg-white hover:text-fce-orange transition-all duration-300 inline-flex items-center justify-center gap-2 ring-4 ring-orange-400/30 sm:ring-0"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              animate={{ scale: [1, 1.03, 1] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
-              <Ticket className="w-5 h-5" />
+              <Ticket className="w-6 h-6 sm:w-5 sm:h-5" />
               Réserver vos Billets
             </motion.button>
           </a>
 
-          <a href="/#contact">
+          <a href="/#contact" className="w-full sm:w-auto">
             <motion.button
-              className="bg-fce-green/80 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-base md:text-lg hover:bg-white hover:text-fce-green transition-all duration-300 inline-flex items-center gap-2"
+              className="w-full sm:w-auto bg-fce-green/80 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-base md:text-lg hover:bg-white hover:text-fce-green transition-all duration-300 inline-flex items-center justify-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -100,44 +102,6 @@ const Hero = () => {
               <ArrowRight className="w-5 h-5" />
             </motion.button>
           </a>
-        </motion.div>
-
-        {/* Vidéos */}
-        <motion.div
-          className="w-full max-w-4xl mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-        >
-          {/* France 24 */}
-          <div className="bg-black/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
-            <div className="flex items-center gap-3 px-4 py-3 border-b border-white/10">
-              <span className="bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded tracking-wider uppercase">
-                France 24
-              </span>
-              <p className="text-white text-sm font-medium truncate">
-                France24 parle du Festi&apos;Environnement
-              </p>
-            </div>
-            <video className="w-full aspect-video" controls preload="metadata">
-              <source src="/videos/video-france24-bambino.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          {/* Bambino — Aéroport Conakry */}
-          <div className="bg-black/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
-            <div className="flex items-center gap-3 px-4 py-3 border-b border-white/10">
-              <span className="bg-fce-green text-white text-xs font-bold px-2 py-0.5 rounded tracking-wider uppercase">
-                Exclusif
-              </span>
-              <p className="text-white text-sm font-medium truncate">
-                Bambino — Aéroport de Conakry
-              </p>
-            </div>
-            <video className="w-full aspect-video" controls preload="metadata">
-              <source src="/videos/bambino-aeroport-conakry.mp4" type="video/mp4" />
-            </video>
-          </div>
         </motion.div>
       </div>
 
